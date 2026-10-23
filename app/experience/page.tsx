@@ -28,10 +28,8 @@ export default function Experience() {
       className="w-full min-w-0 overflow-hidden bg-black px-4 py-14 text-white sm:px-6 sm:py-16 md:px-30 md:py-20"
     >
       <div className="mx-auto w-full max-w-7xl min-w-0">
-
         {/* Heading Section */}
         <div className="mb-10 grid min-w-0 grid-cols-1 gap-6 sm:gap-8 lg:mb-16 lg:grid-cols-2 lg:gap-10">
-
           {/* Left Heading */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -63,17 +61,18 @@ export default function Experience() {
             className="flex min-w-0 items-center lg:justify-end"
           >
             <p className="w-full max-w-md text-sm leading-7 text-gray-400 sm:text-[15px]">
-              8+ months of hands-on experience building modern web
-              applications using MERN Stack and WordPress.
-              Worked on 4+ real-world projects and continuously
-              improving my development skills.
+              2 years of hands-on experience building modern web applications
+              using the MERN Stack and WordPress. Worked on 4+ real-world
+              projects, developing responsive user interfaces, integrating APIs,
+              and building scalable web solutions. Passionate about learning new
+              technologies, solving technical challenges, and continuously
+              improving development skills.
             </p>
           </motion.div>
         </div>
 
         {/* Main Content */}
         <div className="grid min-w-0 grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-10">
-
           {/* Experience Card */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -117,10 +116,9 @@ export default function Experience() {
 
             {/* Description */}
             <p className="mb-6 text-sm leading-7 text-gray-400 sm:mb-8 sm:text-[15px] sm:leading-8">
-              Building responsive websites, dashboards,
-              WordPress solutions and MERN Stack applications.
-              Focused on creating scalable and user-friendly
-              digital products.
+              Building responsive websites, dashboards, WordPress solutions and
+              MERN Stack applications. Focused on creating scalable and
+              user-friendly digital products.
             </p>
 
             {/* Responsibilities */}
