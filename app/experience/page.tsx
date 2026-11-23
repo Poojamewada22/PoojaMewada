@@ -61,7 +61,7 @@ export default function Experience() {
             className="flex min-w-0 items-center lg:justify-end"
           >
             <p className="w-full max-w-md text-sm leading-7 text-gray-400 sm:text-[15px]">
-              2 years of hands-on experience building modern web applications
+              2 years 1 month of hands-on experience building modern web applications
               using the MERN Stack and WordPress. Worked on 4+ real-world
               projects, developing responsive user interfaces, integrating APIs,
               and building scalable web solutions. Passionate about learning new
