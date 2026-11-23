@@ -1,16 +1,10 @@
 "use client";
 
-import {
-  Code2,
-  Database,
-  Wrench,
-  Globe,
-  Brain,
-} from "lucide-react";
+import { Code2, Database, Wrench, Globe, Brain } from "lucide-react";
 
 const skillCategories = [
   {
-    icon: <Code2 size={26} />,
+    icon: Code2,
     title: "Frontend",
     skills: [
       "HTML",
@@ -22,29 +16,17 @@ const skillCategories = [
     ],
   },
   {
-    icon: <Database size={26} />,
+    icon: Database,
     title: "Backend",
-    skills: [
-      "Node.js",
-      "Express.js",
-      "REST APIs",
-      "JWT Auth",
-      "MongoDB",
-    ],
+    skills: ["Node.js", "Express.js", "REST APIs", "JWT Auth", "MongoDB"],
   },
   {
-    icon: <Wrench size={26} />,
+    icon: Wrench,
     title: "Tools & Platforms",
-    skills: [
-      "Git",
-      "GitHub",
-      "Postman",
-      "Vercel",
-      "Render",
-    ],
+    skills: ["Git", "GitHub", "Postman", "Vercel", "Render"],
   },
   {
-    icon: <Globe size={26} />,
+    icon: Globe,
     title: "WordPress",
     skills: [
       "WordPress",
@@ -55,7 +37,7 @@ const skillCategories = [
     ],
   },
   {
-    icon: <Brain size={26} />,
+    icon: Brain,
     title: "Learning",
     skills: [
       "TypeScript",
@@ -71,59 +53,62 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="bg-black text-white py-24 px-6 text-[12px]"
+      className="relative overflow-hidden bg-black px-6 py-24 text-white md:py-28"
     >
-      <div className="max-w-6xl  mx-auto ">
-
+      <div className="mx-auto max-w-6xl">
         {/* Section Tag */}
-        <div className="flex items-center gap-2 mb-6">
-          <div className="w-2 h-2 bg-gray-400 rotate-45"></div>
-          <span className="uppercase tracking-[4px] text-gray-500 text-[10px]">
+        <div className="mb-6 flex items-center gap-2">
+          <div className="h-2 w-2 rotate-45 bg-gray-400" />
+          <span className="text-[10px] uppercase tracking-[4px] text-gray-500">
             Skills
           </span>
         </div>
 
         {/* Heading */}
-        <h2 className="text-2xl md:text-5xl font-semibold tracking-tight mb-16">
+        <h2 className="mb-16 text-2xl font-semibold tracking-tight md:text-5xl">
           Tools I use to{" "}
-          <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent italic">
+          <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text italic text-transparent">
             build
           </span>{" "}
           amazing projects.
         </h2>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
-          {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className="group rounded-3xl border border-white/10 bg-[#080808] p-7 transition-all duration-500 hover:border-cyan-500/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]"
-            >
-              {/* Icon */}
-              <div className="w-12 h-12 rounded-2xl bg-white/4 hover:bg-purple-600 flex items-center justify-center text-cyan-400 hover:text-white mb-5">
-                {category.icon}
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          {skillCategories.map((category, index) => {
+            const Icon = category.icon;
+
+            return (
+              <div
+                key={index}
+                className="group rounded-3xl border border-white/10 bg-[#080808] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-cyan-500/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.12)]"
+              >
+                {/* Icon */}
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04] text-cyan-400 transition-all duration-300 group-hover:bg-purple-600 group-hover:text-white">
+                  <Icon size={26} strokeWidth={1.8} />
+                </div>
+
+                {/* Title */}
+                <h3 className="mb-5 text-[20px] font-semibold text-white">
+                  {category.title}
+                </h3>
+
+                {/* Skills */}
+                <ul className="space-y-3">
+                  {category.skills.map((skill, i) => (
+                    <li
+                      key={i}
+                      className="text-sm text-gray-400 transition-colors duration-300 group-hover:text-gray-300"
+                    >
+                      <span className="mr-2 text-cyan-500">•</span>
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
               </div>
-
-              {/* Title */}
-              <h3 className="text-[20px] font-semibold mb-4">
-                {category.title}
-              </h3>
-
-              {/* Skills */}
-              <ul className="space-y-3">
-                {category.skills.map((skill, i) => (
-                  <li
-                    key={i}
-                    className="text-gray-400 group-hover:text-gray-300 transition"
-                  >
-                    • {skill}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            );
+          })}
         </div>
-
       </div>
     </section>
   );
